@@ -1,16 +1,25 @@
 {
   "name": "capstone_project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sass ./sass/index.scss ./css/style.css --watch"
+    "start": "sass ./sass/index.scss ./css/style.css  --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "sass": "^1.43.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrNateDog/lvl2_capstone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mrNateDog/lvl2_capstone/issues"
+  },
+  "homepage": "https://github.com/mrNateDog/lvl2_capstone#readme",
+  "description": ""
 }

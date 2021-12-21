@@ -1,10 +1,16 @@
-.nathan {
-  width: 80%;
-}
-
 body {
   background-color: #e5e5e5;
   color: #383838;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.jumbotron {
+  background-color: #041e42;
+  color: #e5e5e5;
+}
+
+.navbar {
+  background-color: #ffb81c;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,16 +1,19 @@
-@use "test";
-
 $predsGold: #ffb81c;
 $predsNavy: #041e42;
 $textColor: #383838;
 $altcolor: #e5e5e5;
 $altColor2: #ffffff;
+$another: #000000;
 
 body {
   background-color: $altcolor;
   color: $textColor;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.header {
+.jumbotron {
+  background-color: $predsNavy;
+  color: $altcolor;
 }
-.navigation {
+.navbar {
+  background-color: $predsGold;
 }
