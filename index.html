@@ -12,14 +12,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="test_nhl_api.js"></script>
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Level 2 Capstone Project</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>NHL Schedule Viewer</title>
   </head>
   <body>
     <div class="container-lg"></div>
     <div class="jumbotron jumbotron-fluid text-center p-4">
-      <h1>NHL Schedule Viewer</h1>
-      <h4>What games are happening on</h4>
+      <h1>NHL SCHEDULE VIEWER</h1>
+      <h4>View all hockey games on a selected date</h4>
     </div>
     <nav class="navbar navbar-expand-sm">
       <!-- Hamburger Menu -->
@@ -34,10 +34,7 @@
 
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <!-- DATE SELECTER
-            <input type="text" value="yyyy-MM-dd" id="dateSelect" />
-            -->
+          <li class="nav-item" data-toggle="tooltip" title="Select a Date.">
             <input
               id="dateSelect"
               dateFormat="yyyy/MM/dd"
@@ -49,23 +46,28 @@
             />
           </li>
           <li class="nav-item">
-            <button id="submit">Submit</button>
+            <button
+              id="submit"
+              data-toggle="tooltip"
+              title="Click to View Results"
+            >
+              Submit
+            </button>
           </li>
           <li class="nav-item">
-            <button id="resetButton">Reset</button>
+            <button
+              id="resetButton"
+              data-toggle="tooltip"
+              title="Click to Reset Games. Then Select another date."
+            >
+              Reset
+            </button>
           </li>
         </ul>
       </div>
     </nav>
-    <div class="container" 12 id="dateHeader">Games on</div>
-    <br>
-    <div class="card-deck">
-      <div class="card" id="schedule-container" style="width: 400px"></div>
-      <h1 id="awayTeam"></h1><br>
-      <h3 class="versus">VS</h3><br>
-      <h1 id="homeTeam"></h1><br>
-    </div>
-  </div>
+    <br />
+    <div class="games" id="schedule-container"></div>
     <div class="jumbotron jumbotron-fluid p-0" style="margin-bottom: 0">
       <p><strong>All information Property of NHL API</strong></p>
     </div>

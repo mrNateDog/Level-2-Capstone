@@ -1,7 +1,7 @@
 //DATE PICKER
 $(document).ready(function () {
   $("#resetButton").click(function () {
-    $(".card-deck").empty();
+    $(".card").remove();
   });
   $("#submit").click(function () {
     var dateValue = $("#dateSelect").val();
@@ -18,14 +18,21 @@ $(document).ready(function () {
         while (x < cardCount) {
           data.dates.forEach((date) => {
             date.games.forEach((game) => {
+              console.log(game);
               // $("#dateHeader").append(dateValue);
               // $("#schedule-container" ).append("<br/>");
               // $("#schedule-container" ).append("<br/>");
-              $("#schedule-container").append(game.teams.away.team.name);
-              $("#schedule-container").append(" <strong> vs </strong>");
-              $("#schedule-container").append(game.teams.home.team.name);
-              $("#schedule-container").append("<br/>");
-              $("#schedule-container").append("<br/>");
+              $("#schedule-container").append(`
+              <div class="card" style="width: 400px;"> 
+                <div class="card-body">
+                  <h5 class="card-title">${game.teams.away.team.name} VS ${
+                game.teams.home.team.name
+              }</h5>
+                  <p class="card-text">Date: ${new Date(game.gameDate)}</p>
+                  <p class="card-text">Location: ${game.venue.name}</p>
+                  <a href="
+                </div>
+              </div>`);
               x++;
             });
           });
