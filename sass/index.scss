@@ -4,6 +4,7 @@ $textColor: #383838;
 $altcolor: #e5e5e5;
 $altColor2: #ffffff;
 $another: #000000;
+$padding: 5px;
 
 body {
   background-color: $altcolor;
@@ -13,11 +14,19 @@ body {
 .jumbotron {
   background-color: $predsNavy;
   color: $altcolor;
+  padding: $padding;
 }
 .navbar {
   background-color: $predsGold;
+  padding: $padding;
+  margin: $padding;
 }
 b {
   text-align: center;
-  color: #ffb81c;
+  color: $predsGold;
+}
+#schedule-container {
+  background-color: $predsGold;
+  text-align: left;
+  width: 50%;
 }

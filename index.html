@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="A NHL Schedule Viewer: Select a date and see all NHL games occuring on the selected date"
+    />
+    <meta name="keywords" content="NHL, Schedule, Hockey, Games, Dates" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
@@ -12,7 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="test_nhl_api.js"></script>
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>NHL Schedule Viewer</title>
   </head>
   <body>
@@ -21,52 +26,46 @@
       <h1>NHL SCHEDULE VIEWER</h1>
       <h4>View all hockey games on a selected date</h4>
     </div>
-    <nav class="navbar navbar-expand-sm">
-      <!-- Hamburger Menu -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#collapsibleNavbar"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item" data-toggle="tooltip" title="Select a Date.">
-            <input
-              id="dateSelect"
-              dateFormat="yyyy/MM/dd"
-              type="date"
-              required
-              autocomplete="off"
-              min="1947-12-06"
-              max="2022-04-29"
-            />
-          </li>
-          <li class="nav-item">
-            <button
-              id="submit"
-              data-toggle="tooltip"
-              title="Click to View Results"
-            >
-              Submit
-            </button>
-          </li>
-          <li class="nav-item">
-            <button
-              id="resetButton"
-              data-toggle="tooltip"
-              title="Click to Reset Games. Then Select another date."
-            >
-              Reset
-            </button>
-          </li>
-        </ul>
-      </div>
+    <nav class="navbar navbar-expand-sm p-1">
+      <ul class="navbar-nav">
+        <li class="navbar-brand">Date Selector</li>
+        <li
+          class="nav-item p-1"
+          data-toggle="tooltip"
+          title="Click SUBMIT for today's games, or choose another date."
+        >
+          <input
+            id="dateSelect"
+            dateFormat="yyyy/MM/dd"
+            type="date"
+            required
+            autocomplete="off"
+            min="1947-12-06"
+            max="2022-04-29"
+            value="2022-01-03"
+          />
+        </li>
+        <li class="nav-item p-1">
+          <button
+            id="submit"
+            data-toggle="tooltip"
+            title="Click to View Results"
+          >
+            Submit
+          </button>
+        </li>
+        <li class="nav-item p-1">
+          <button
+            id="resetButton"
+            data-toggle="tooltip"
+            title="Click to Reset Games. Then Select another date."
+          >
+            Reset
+          </button>
+        </li>
+      </ul>
     </nav>
-    <br />
+
     <div class="games" id="schedule-container"></div>
     <div class="jumbotron jumbotron-fluid p-0" style="margin-bottom: 0">
       <p><strong>All information Property of NHL API</strong></p>

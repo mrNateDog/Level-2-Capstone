@@ -19,18 +19,18 @@ $(document).ready(function () {
           data.dates.forEach((date) => {
             date.games.forEach((game) => {
               console.log(game);
-              // $("#dateHeader").append(dateValue);
-              // $("#schedule-container" ).append("<br/>");
-              // $("#schedule-container" ).append("<br/>");
               $("#schedule-container").append(`
-              <div class="card" style="width: 400px;"> 
+              <div class="card card-sm"> 
                 <div class="card-body">
-                  <h5 class="card-title">${game.teams.away.team.name} VS ${
+                  <h5 class="card-header">${game.teams.away.team.name} vs ${
                 game.teams.home.team.name
               }</h5>
-                  <p class="card-text">Date: ${new Date(game.gameDate)}</p>
-                  <p class="card-text">Location: ${game.venue.name}</p>
-                  <a href="
+              <br>
+                  <p class="card-text">Date: ${new Date(game.gameDate)}</p> 
+                  <p class="card-link">Location: ${game.venue.name}</p>
+                 <a href="https://www.nhl.com/gamecenter/${
+                   game.gamePk
+                 }" target='_blank'>Preview</a> 
                 </div>
               </div>`);
               x++;
