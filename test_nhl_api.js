@@ -21,7 +21,7 @@ $(document).ready(function () {
               console.log(game);
               $("#schedule-container").append(`
               <div class="card "> 
-                <div class="card-body card-sm p-1">
+                <div class="card-body card-sm">
                   <h5 class="card-header">${game.teams.away.team.name} vs ${
                 game.teams.home.team.name
               }</h5>
