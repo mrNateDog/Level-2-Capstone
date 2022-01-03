@@ -25,6 +25,8 @@ b {
   text-align: center;
   color: $predsGold;
 }
-#schedule-container {
+.card-body {
   text-align: left;
+  margin-bottom: 10px;
+  border: $textColor;
 }

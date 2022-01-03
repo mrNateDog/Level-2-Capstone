@@ -21,8 +21,10 @@ b {
   color: #ffb81c;
 }
 
-#schedule-container {
+.card-body {
   text-align: left;
+  margin-bottom: 10px;
+  border: #383838;
 }
 
 /*# sourceMappingURL=style.css.map */
