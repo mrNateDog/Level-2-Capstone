@@ -26,11 +26,15 @@ $(document).ready(function () {
                 game.teams.home.team.name
               }</h5>
               <br>
-                  <p class="card-text">Date: ${new Date(game.gameDate)}</p> 
-                  <p class="card-link">Location: ${game.venue.name}</p>
+                  <p class="card-text"><strong>Date: </strong>${new Date(
+                    game.gameDate
+                  )}</p> 
+                  <p class="card-link"><strong>Location: </strong>${
+                    game.venue.name
+                  }</p>
                  <a href="https://www.nhl.com/gamecenter/${
                    game.gamePk
-                 }" target='_blank'>Preview</a> 
+                 }" target='_blank'> Game Preview</a> 
                 </div>
               </div>`);
               x++;
