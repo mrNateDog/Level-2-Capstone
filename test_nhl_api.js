@@ -20,7 +20,7 @@ $(document).ready(function () {
             date.games.forEach((game) => {
               console.log(game);
               $("#schedule-container").append(`
-              <div class="card card-sm"> 
+              <div class="card card-sm border-1 p-1"> 
                 <div class="card-body">
                   <h5 class="card-header">${game.teams.away.team.name} vs ${
                 game.teams.home.team.name
