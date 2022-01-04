@@ -1,5 +1,6 @@
 //DATE PICKER
 $(document).ready(function () {
+  $("#dateSelect");
   $("#resetButton").click(function () {
     $(".card").remove();
   });
